@@ -1,9 +1,9 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const NFTemp = artifacts.require('Temp')
 
 module.exports = async callback => {
-    const dnd = await DungeonsAndDragons.deployed()
+    const nfty = await NFTemp.deployed()
     console.log('Let\'s get the overview of your character')
-    const overview = await dnd.characters(0)
+    const overview = await nfty.characters(0)
     console.log(overview)
     callback(overview.tx)
 }

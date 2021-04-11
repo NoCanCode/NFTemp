@@ -1,12 +1,11 @@
-const DungeonsAndDragons = artifacts.require('DungeonsAndDragonsCharacter')
+const NFTemp = artifacts.require('Temp')
 const TOKENID = 0
 module.exports = async callback => {
-    const dnd = await DungeonsAndDragons.deployed()
+    const nfty = await NFTemp.deployed()
     console.log('Let\'s set the tokenURI of your characters')
-    const tx = await dnd.setTokenURI(0, "https://ipfs.io/ipfs/QmaSED9ZSbdGts5UZqueFJjrJ4oHH3GnmGJdSDrkzpYqRS?filename=the-chainlink-knight.json")
-    const tx1 = await dnd.setTokenURI(1, "https://ipfs.io/ipfs/QmTvsVaaHTuMNmwXgbfgkrztFEazAPyzmrb4VSS2PbqLjA?filename=the-chainlink-elf.json")
-    const tx2 = await dnd.setTokenURI(2, "https://ipfs.io/ipfs/QmPZQhiBB6pwcxRgwZe2mx6ZizCPYgq8i4FBMETyWK1V2z?filename=the-chainlink-wizard.json")
-    const tx3 = await dnd.setTokenURI(3, "https://ipfs.io/ipfs/QmS6aznzxshLMcECPQZjCR94UF22WHu6FMM5HLQvaYL9NP?filename=the-chainlink-orc.json")
+    const tx = await nfty.setTokenURI(0, "https://ipfs.io/ipfs/QmcohUJYifDYi3v9PtjuYV5qVUs13bpBPRQjnHoFUxF7Di?filename=Hot-Day.json")
+    const tx1 = await nfty.setTokenURI(1, "https://ipfs.io/ipfs/QmPBrWqJVXftyDxR4bUAbMqdaFmbhMiPdssWCRRinq6mL7?filename=Rainy-Day.json")
+    const tx2 = await nfty.setTokenURI(2, "https://ipfs.io/ipfs/QmSVD8tWkYmsLyS6f55dVgmMVp57sV9xje1gSShk3oZ4HV?filename=Snowy-Day.json")
     console.log(tx)
     callback(tx.tx)
 }

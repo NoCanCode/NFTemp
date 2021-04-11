@@ -1,0 +1,35 @@
+{
+    "name": "A Hot Day",
+    "description": "Try not to get burnt!",
+    "image": "https://ipfs.io/ipfs/Qmdzz83DeG9J6HnXLgYgZBiFYfvn798DFbyQSKQnyr7JuT?filename=HotDay.png",
+    "attributes": [
+        {
+            "trait_type": "Wind",
+            "value": 84
+        },
+        {
+            "trait_type": "Pressure",
+            "value": 86
+        },
+        {
+            "trait_type": "Pollen",
+            "value": 19
+        },
+        {
+            "trait_type": "UV",
+            "value": 79
+        },
+        {
+            "trait_type": "Heat",
+            "value": 93
+        },
+        {
+            "trait_type": "Cold",
+            "value": 53
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

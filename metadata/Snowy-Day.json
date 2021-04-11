@@ -1,0 +1,35 @@
+{
+    "name": "A Snowy Day",
+    "description": "Try not to freeze!",
+    "image": "https://ipfs.io/ipfs/QmZSeKz89wxyBy6cbyrDZJGQuQETfkSKYqNbgLqXhAsyVH?filename=SnowDay.png",
+    "attributes": [
+        {
+            "trait_type": "Wind",
+            "value": 46
+        },
+        {
+            "trait_type": "Pressure",
+            "value": 55
+        },
+        {
+            "trait_type": "Pollen",
+            "value": 54
+        },
+        {
+            "trait_type": "UV",
+            "value": 61
+        },
+        {
+            "trait_type": "Heat",
+            "value": 93
+        },
+        {
+            "trait_type": "Cold",
+            "value": 21
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

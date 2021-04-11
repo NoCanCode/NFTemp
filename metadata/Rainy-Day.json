@@ -1,0 +1,35 @@
+{
+    "name": "A Rainy Day",
+    "description": "Try not to get wet!",
+    "image": "https://ipfs.io/ipfs/QmcYrTz4XWy3KczRGhuhRX2RHghojJJVwA3wFGy2Mde86e?filename=Rainy.png",
+    "attributes": [
+        {
+            "trait_type": "Wind",
+            "value": 53
+        },
+        {
+            "trait_type": "Pressure",
+            "value": 54
+        },
+        {
+            "trait_type": "Pollen",
+            "value": 2
+        },
+        {
+            "trait_type": "UV",
+            "value": 96
+        },
+        {
+            "trait_type": "Heat",
+            "value": 94
+        },
+        {
+            "trait_type": "Cold",
+            "value": 99
+        },
+        {
+            "trait_type": "Experience",
+            "value": 0
+        }
+    ]
+}

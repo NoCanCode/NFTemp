@@ -1,4 +1,4 @@
-// contracts/DungeonsAndDragonsCharacter.sol
+// contracts/Temp.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
 
@@ -7,7 +7,7 @@ import "@chainlink/contracts/src/v0.6/VRFConsumerBase.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
+contract Temp is ERC721, VRFConsumerBase, Ownable {
     using SafeMath for uint256;
     using Strings for string;
 
@@ -20,12 +20,12 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     // rinkeby: 0x01BE23585060835E02B77ef475b0Cc51aA1e0709a
 
     struct Character {
-        uint256 strength;
-        uint256 dexterity;
-        uint256 constitution;
-        uint256 intelligence;
-        uint256 wisdom;
-        uint256 charisma;
+        uint256 wind;
+        uint256 pressure;
+        uint256 pollen;
+        uint256 uv;
+        uint256 heat;
+        uint256 cold;
         uint256 experience;
         string name;
     }
@@ -47,7 +47,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     constructor(address _VRFCoordinator, address _LinkToken, bytes32 _keyhash)
         public
         VRFConsumerBase(_VRFCoordinator, _LinkToken)
-        ERC721("DungeonsAndDragonsCharacter", "D&D")
+        ERC721("Temp", "NFT")
     {   
         VRFCoordinator = _VRFCoordinator;
         LinkToken = _LinkToken;
@@ -86,22 +86,22 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
         override
     {
         uint256 newId = characters.length;
-        uint256 strength = (randomNumber % 100);
-        uint256 dexterity = ((randomNumber % 10000) / 100 );
-        uint256 constitution = ((randomNumber % 1000000) / 10000 );
-        uint256 intelligence = ((randomNumber % 100000000) / 1000000 );
-        uint256 wisdom = ((randomNumber % 10000000000) / 100000000 );
-        uint256 charisma = ((randomNumber % 1000000000000) / 10000000000);
+        uint256 wind = (randomNumber % 100);
+        uint256 pressure = ((randomNumber % 10000) / 100 );
+        uint256 pollen = ((randomNumber % 1000000) / 10000 );
+        uint256 uv = ((randomNumber % 100000000) / 1000000 );
+        uint256 heat = ((randomNumber % 10000000000) / 100000000 );
+        uint256 cold = ((randomNumber % 1000000000000) / 10000000000);
         uint256 experience = 0;
 
         characters.push(
             Character(
-                strength,
-                dexterity,
-                constitution,
-                intelligence,
-                wisdom,
-                charisma,
+                wind,
+                pressure,
+                pollen,
+                uv,
+                heat,
+                cold,
                 experience,
                 requestToCharacterName[requestId]
             )
@@ -129,7 +129,7 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
     {
         return (
             characters[tokenId].name,
-            characters[tokenId].strength + characters[tokenId].dexterity + characters[tokenId].constitution + characters[tokenId].intelligence + characters[tokenId].wisdom + characters[tokenId].charisma,
+            characters[tokenId].wind + characters[tokenId].pressure + characters[tokenId].pollen + characters[tokenId].uv + characters[tokenId].heat + characters[tokenId].cold,
             getLevel(tokenId),
             characters[tokenId].experience
         );
@@ -149,12 +149,12 @@ contract DungeonsAndDragonsCharacter is ERC721, VRFConsumerBase, Ownable {
         )
     {
         return (
-            characters[tokenId].strength,
-            characters[tokenId].dexterity,
-            characters[tokenId].constitution,
-            characters[tokenId].intelligence,
-            characters[tokenId].wisdom,
-            characters[tokenId].charisma,
+            characters[tokenId].wind,
+            characters[tokenId].pressure,
+            characters[tokenId].pollen,
+            characters[tokenId].uv,
+            characters[tokenId].heat,
+            characters[tokenId].cold,
             characters[tokenId].experience
         );
     }
